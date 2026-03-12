@@ -9,7 +9,7 @@ export default function OrderCard({name, price, quantity, onQuantityChange}) {
       </div>
 
       <div className="order-quantity">
-        <div className="order-button" onClick={() => quantity > 0 && onQuantityChange(-1)}>-</div>
+        <div className="order-button" style={{backgroundColor: quantity === 0 ? "#bfbfbf" : ""}}  onClick={() => quantity > 0 && onQuantityChange(-1)}>-</div>
         <h4>{quantity}</h4>
         <div className="order-button" onClick={() => onQuantityChange(+1)}>+</div>
       </div>
