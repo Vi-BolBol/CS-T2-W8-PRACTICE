@@ -1,17 +1,17 @@
 import React from "react";
 
-export default function OrderCard() {
+export default function OrderCard({name, price, quantity, onQuantityChange}) {
   return (
     <div className="order">
       <div>
-        <h4>TODO NAME</h4>
-        <small>TODO PRICE</small>
+        <h4>{name}</h4>
+        <small>{price}</small>
       </div>
 
       <div className="order-quantity">
-        <div className="order-button">-</div>
-        <h4>TODO PRICE</h4>
-        <div className="order-button">+</div>
+        <div className="order-button" onClick={() => quantity > 0 && onQuantityChange(-1)}>-</div>
+        <h4>{quantity}</h4>
+        <div className="order-button" onClick={() => onQuantityChange(+1)}>+</div>
       </div>
     </div>
   );
