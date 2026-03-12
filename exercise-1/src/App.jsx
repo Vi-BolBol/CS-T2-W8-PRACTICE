@@ -21,17 +21,17 @@ export default function App() {
     const scoreWidth = `${width}%`;
 
     // 2- Compute color (optional)
-    const scoreColor1 = `#f3bc47`;
-    const scoreColor2 = `#bbf347`;
-    const scoreColor3 = `#58f347`;
+    let scoreColor1 = `#f3bc47`;
+    let scoreColor2 = `#bbf347`;
+    let scoreColor3 = `#58f347`;
 
     // 3 - Return the style object
-    if (scoreWidth < 30){
+    if (width < 30){
       return{
         width: scoreWidth,
         backgroundColor: scoreColor1,
       };
-    } else if (scoreWidth < 70){
+    } else if (width < 70){
       return{
         width: scoreWidth,
         backgroundColor: scoreColor2,
